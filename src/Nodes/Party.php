@@ -40,7 +40,7 @@ class Party implements NodeInterface
 
     /**
      * @Serializer\Expose
-     * @Serializer\Type("Naugrim\BMEcat\Nodes\Address")
+     * @Serializer\Type("Naugrim\Opentrans\Nodes\Party\Address")
      * @Serializer\SerializedName("ADDRESS")
      *
      * @var Address
