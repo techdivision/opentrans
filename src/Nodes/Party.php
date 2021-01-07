@@ -4,7 +4,6 @@ namespace Naugrim\OpenTrans\Nodes;
 
 use /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
-use Naugrim\BMEcat\Nodes\Address;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\BMEcat\Nodes\Party as BmeParty;
 use Naugrim\OpenTrans\Nodes\Party\Account;
@@ -40,9 +39,9 @@ class Party extends BmeParty implements NodeInterface
 
     /**
      * @param string $id
-     * @return Party
+     * @return self
      */
-    public function setId(string $id): Party
+    public function setId(string $id): self
     {
         $this->id = $id;
         return $this;
