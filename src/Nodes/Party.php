@@ -32,7 +32,7 @@ class Party implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bme:PARTY_ROLE")
+     * @Serializer\SerializedName("PARTY_ROLE")
      *
      * @var string
      */
@@ -41,7 +41,7 @@ class Party implements NodeInterface
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Address")
-     * @Serializer\SerializedName("bme:ADDRESS")
+     * @Serializer\SerializedName("ADDRESS")
      *
      * @var Address
      */
@@ -50,7 +50,7 @@ class Party implements NodeInterface
     /**
      *
      * @Serializer\Expose
-     * @Serializer\SerializedName("bme:MIME_INFO")
+     * @Serializer\SerializedName("MIME_INFO")
      * @Serializer\Type("array<Naugrim\BMEcat\Nodes\Mime>")
      * @Serializer\XmlList( entry="MIME")
      *
