@@ -4,10 +4,10 @@ namespace Naugrim\OpenTrans\Nodes;
 
 use /** @noinspection PhpUnusedAliasInspection */
     JMS\Serializer\Annotation as Serializer;
-use Naugrim\BMEcat\Nodes\Address;
 use Naugrim\BMEcat\Nodes\Contracts\NodeInterface;
 use Naugrim\BMEcat\Nodes\Mime;
 use Naugrim\OpenTrans\Nodes\Party\Account;
+use Naugrim\OpenTrans\Nodes\Party\Address;
 
 class Party implements NodeInterface
 {
