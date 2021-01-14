@@ -65,6 +65,15 @@ class Item implements NodeInterface
     protected $priceLineAmount;
 
     /**
+     * @Serializer\Expose
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("ITEM_UDX")
+     *
+     * @var array
+     */
+    protected $itemUdx;
+
+    /**
      * @return string
      */
     public function getLineItemId(): string
@@ -169,6 +178,24 @@ class Item implements NodeInterface
     public function setPriceLineAmount(float $priceLineAmount): Item
     {
         $this->priceLineAmount = $priceLineAmount;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getItemUdx(): array
+    {
+        return $this->itemUdx;
+    }
+
+    /**
+     * @param array $itemUdx
+     * @return $this
+     */
+    public function setItemUdx(array $itemUdx): Item
+    {
+        $this->itemUdx = $itemUdx;
         return $this;
     }
 }

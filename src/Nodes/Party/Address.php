@@ -65,7 +65,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $street;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
@@ -74,7 +74,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $zip;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
@@ -83,7 +83,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $boxno;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
@@ -101,7 +101,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $city;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")
@@ -128,7 +128,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $vatId;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Phone")
@@ -137,7 +137,7 @@ class Address implements NodeInterface
      * @var Phone
      */
     protected $phone;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Fax")
@@ -155,7 +155,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $email;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("Naugrim\BMEcat\Nodes\Crypto\PublicKey")
@@ -173,7 +173,7 @@ class Address implements NodeInterface
      * @var string
      */
     protected $url;
-    
+
     /**
      * @Serializer\Expose
      * @Serializer\Type("string")

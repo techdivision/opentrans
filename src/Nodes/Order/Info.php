@@ -30,7 +30,6 @@ class Info implements NodeInterface
      */
     protected $date;
 
-
     /**
      *
      * @Serializer\Expose
@@ -50,6 +49,33 @@ class Info implements NodeInterface
      * @var PartiesReference
      */
     protected $partiesReference;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("bme:CURRENCY")
+     *
+     * @var string
+     */
+    protected $currency;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("Naugrim\OpenTrans\Nodes\Order\Payment")
+     * @Serializer\SerializedName("PAYMENT")
+     *
+     * @var Payment
+     */
+    protected $payment;
+
+    /**
+     * @Serializer\Expose
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("HEADER_UDX")
+     *
+     * @var array
+     */
+    protected $headerUdx;
 
     /**
      * @return string
@@ -116,7 +142,7 @@ class Info implements NodeInterface
      * @param Party $party
      * @return $this
      */
-    public function addParty(Party $party)
+    public function addParty(Party $party): Info
     {
         $this->parties[] = $party;
         return $this;
@@ -137,6 +163,60 @@ class Info implements NodeInterface
     public function setPartiesReference(PartiesReference $partiesReference): Info
     {
         $this->partiesReference = $partiesReference;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency(): string
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     * @return Info
+     */
+    public function setCurrency(string $currency): Info
+    {
+        $this->currency = $currency;
+        return $this;
+    }
+
+    /**
+     * @return Payment
+     */
+    public function getPayment(): Payment
+    {
+        return $this->payment;
+    }
+
+    /**
+     * @param Payment $payment
+     * @return Info
+     */
+    public function setPayment(Payment $payment): Info
+    {
+        $this->payment = $payment;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getHeaderUdx(): array
+    {
+        return $this->headerUdx;
+    }
+
+    /**
+     * @param array $headerUdx
+     * @return Info
+     */
+    public function setHeaderUdx(array $headerUdx): Info
+    {
+        $this->headerUdx = $headerUdx;
         return $this;
     }
 }
